@@ -1,62 +1,66 @@
-:root {
-    --primary: #fffff5;
-    --secondary: #000000;
-    --accent: #CD5D67;
-}
-
 @font-face {
     font-family: Font;
     src: url(Editorial%New%Regular%400.otf);
 }
 
 body {
-    font-family: 'Font';
-    font-size: 1.4rem;
-    margin: 5rem;
-    color: var(--primary);
-    background-color: var(--secondary);
+    font-family: Helvetica, sans-serif;
+    margin: 1rem;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: row;
+    position: relative;
 }
 
-li {
-    line-height: 2;
-
+table {
+    flex-shrink: 1;
+    border: none;
+    border-collapse: collapse;
 }
 
-h1 {
-    margin: 0;
-    color: var(--accent)
-}
-
-h2 {
+td {
+    padding: 2rem;
     font-style: italic;
 }
 
+td + td {
+    font-style: normal;
+}
+
+tr + tr {
+    border-top: 1px solid gray;
+}
+
+span {
+    color: gray;
+}
+
+.display-image {
+    overflow: hidden;
+    flex-shrink: 3;
+    margin: 2rem;
+    object-fit: cover;
+}
+
+a > img {
+    width: 1.7rem;
+    height: 1.7rem;
+}
 
 a {
-    color: var(--primary);
+    color: white;
     text-decoration: none;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    padding: 0;
-    transition: padding 0.25s ease;
 }
 
-a:hover:not(:has(img)) {
-    color: var(--secondary);
-    background-color: var(--primary);
-    border-top-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    padding: 1rem;
-    transition: padding 0.5s ease;
-}
-
-img {
-    width: 2rem;
-    height: 2rem;
+a:hover {
+    color: gray;
+    text-decoration: line-through;
 }
 
 ::selection, -moz-selection{
-    color: var(--secondary);
-    background-color: var(--primary);
+    color: black;
+    background-color: white;
 }
