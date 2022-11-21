@@ -15,6 +15,7 @@ table {
     flex-shrink: 1;
     border: none;
     border-collapse: collapse;
+    max-width: 32rem;
 }
 
 td {
