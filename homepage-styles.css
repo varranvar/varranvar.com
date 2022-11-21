@@ -1,7 +1,3 @@
-@font-face {
-    font-family: Font;
-    src: url(Editorial%New%Regular%400.otf);
-}
 
 body {
     font-family: Helvetica, sans-serif;
@@ -12,7 +8,7 @@ body {
     justify-content: center;
     align-self: center;
     flex-direction: row;
-    position: relative;
+    flex-wrap: wrap;
 }
 
 table {
