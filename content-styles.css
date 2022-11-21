@@ -1,6 +1,7 @@
 body {
-    font-family: Helvetica, sans-serif;
-    margin: 1rem;
+    font-family: monospace;
+    width: 32rem;
+    margin: 2rem auto;
     color: white;
     background-color: black;
 }
