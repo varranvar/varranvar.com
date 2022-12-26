@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>On Life Logging</title>
+  <link rel="stylesheet" href="content-styles.css">
+</head>
+
+<body>
+  On One-Boxing<br><br>
+
+  <p>The general consensus on the answer to <a href="https://en.wikipedia.org/wiki/Newcomb%27s_paradox">Newcomb&#39;s Paradox</a> is two-boxing.</p>
+  <p>This is the traditional game theory chart used to argue for two-boxing:</p>
+  <table>
+  <thead>
+  <tr>
+  <th>Predicted Choice</th>
+  <th>Actual Choice</th>
+  <th>Payout</th>
+  </tr>
+  </thead>
+  <tbody><tr>
+  <td>A + B</td>
+  <td>A + B</td>
+  <td>$1,000</td>
+  </tr>
+  <tr>
+  <td>A + B</td>
+  <td>B</td>
+  <td>$0</td>
+  </tr>
+  <tr>
+  <td>B</td>
+  <td>A + B</td>
+  <td>$1,001,000</td>
+  </tr>
+  <tr>
+  <td>B</td>
+  <td>B</td>
+  <td>$1,000,000</td>
+  </tr>
+  </tbody></table>
+  <p>From this graph, the two boxing option seems optimal.</p>
+  <p>The issue with this model is that it fails to account for probability.</p>
+  <pre><code>
+  P[Predicted(A + B) | Chose(A + B)] = 0.99
+  P[Predicted(B) | Chose(A + B)] = 0.01
+  P[Predicted(B) | Chose(B)] = 0.99
+  P[Predicted(A + B) | Chose(B)] = 0.01  
+  </code></pre>
+
+  <p>The new chart, weighted by probability:</p>
+  <table>
+  <thead>
+  <tr>
+  <th>Predicted Choice</th>
+  <th>Actual Choice</th>
+  <th>Payout</th>
+  </tr>
+  </thead>
+  <tbody><tr>
+  <td>A + B</td>
+  <td>A + B</td>
+  <td>$990</td>
+  </tr>
+  <tr>
+  <td>A + B</td>
+  <td>B</td>
+  <td>$0</td>
+  </tr>
+  <tr>
+  <td>B</td>
+  <td>A + B</td>
+  <td>$10,010</td>
+  </tr>
+  <tr>
+  <td>B</td>
+  <td>B</td>
+  <td>$990,000</td>
+  </tr>
+  </tbody></table>
+  <p>Now, one-boxing is the clear winner.</p>
+  <p>One can still make the argument that one-boxing is inherently irrational because it would require conceding that the future influences the past. However, to me this argument seems like using a pre-conceived notion of the world to dispute clear evidence. Yes, it doesn&#39;t make sense that the future is influencing the past, but there is evidence showing that it is happening. It doesn&#39;t matter how it&#39;s happening. The predictor could be using a perfect simulation, or they could have an actual time machine. Whatever. All that matters is that the predictor <em>is</em> accurate. A rationale agent should use this new information to get the optimal reward, not simply ignore it because it suggests a possible contradiction to some old information.</p>
+
+</body>
+
+</html>

@@ -10,6 +10,13 @@ a {
     color: gray;
 }
 
+table {
+    border: 1px solid white;
+}
+
+th, td {
+    padding: 0.5rem;
+}
 
 ::selection, -moz-selection{
     color: black;
